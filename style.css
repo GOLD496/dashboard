@@ -10,14 +10,24 @@ body{
 #sidebar{
     grid-row:1/span 5;
     grid-column:1/2;
-    background-color: brown;
+    background-color: blue;
     padding-left: 5%;
     padding-top:5%;
 }
-.main-icon{
+#sidebar > div{
+    margin-bottom: 15%;
+}
+.main-icon,.dashboard-buttons{
     display: flex;
     gap:10px;
     align-items: center;
+    margin-bottom: 20px;
+    color: white;
+}
+.dashboard-buttons > img{
+    width: 30px;
+    height: 30px;
+    color: white;
 }
 nav{
     grid-row:1/2;
