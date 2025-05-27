@@ -2,6 +2,10 @@
     box-sizing: border-box;
     padding:0;
     margin: 0;
+    
+}
+:root{
+    --sidebar-color:rgb(28, 145, 255);
 }
 body{
     display: grid;
@@ -10,7 +14,7 @@ body{
 #sidebar{
     grid-row:1/span 5;
     grid-column:1/2;
-    background-color: blue;
+    background-color: var(--sidebar-color);
     padding-left: 5%;
     padding-top:5%;
 }
@@ -24,18 +28,93 @@ body{
     margin-bottom: 20px;
     color: white;
 }
-.dashboard-buttons > img{
+.main-icon >svg{
+    fill: white;
+    height: 50px;
+    width: 50px;
+}
+.dashboard-buttons > svg{
     width: 30px;
     height: 30px;
-    color: white;
+    fill: white;
 }
 nav{
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    align-items: center;
     grid-row:1/2;
     grid-column:2/span 4;
-    background-color: aqua;
+    display: grid;
+    grid-template: 50% 50%/repeat(10,1fr);
+    gap:10%;
+}
+.search{
+    grid-row: 1/2;
+    grid-column:1/8;
+    display: flex;
+    gap:10px;
+}
+.search svg{
+    width: 30px;
+    height: 30px;
+}
+.search > input{
+    border-radius: 20px;
+    border: 1px solid;
+    width: calc(100% - 40px);
+    background-color: lightgray;
+    opacity: 0.3;
+}
+.Profile{
+    grid-row: 1/2;
+    grid-column: 8/11;
+    display: flex;
+    align-items: center;
+    gap: 10%;
+}
+.Profile svg{
+    width: 30px;
+    height: 30px;
+}
+.Profile img{
+    border-radius: 50%;
+    border: 0px solid;
+    width: 50px;
+    height: 50px;
+}
+.main-profile{
+    grid-row: 2/3;
+    grid-column: 1/6;
+    display: flex;
+    gap:5%;
+    align-self: center;
+}
+.main-profile img{
+    border-radius: 50%;
+    border: 0px solid;
+    width: 70px;
+    height: 70px;
+  
+}
+.nav-buttons{
+    grid-row:2/3;
+    grid-column: 7/11;
+    display: flex;
+    justify-content: space-around;
+}
+.nav-buttons button{
+    background-color: var(--sidebar-color);
+    border-radius: 20px;
+    border: 0px solid;
+    width: 100px;
+    padding: 2%;
 }
 main{
     grid-row:2/span 4;
     grid-column:2/span 4;
-    background-color: black;
+    background-color: lightgray;
+    opacity: 0.3;
+    display: grid;
+    grid-template: repeat(10,1fr)/repeat(10,1fr);
 }
